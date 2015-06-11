@@ -1,0 +1,6 @@
+name: AntiSpammer
+main: MCPH\AntiSpammer\Main
+version: 1.0
+author: MinecrafterPH
+description: Kicks players when they spam.
+website: http://www.minecrafterph.tk
