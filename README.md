@@ -1,2 +1,2 @@
 # AntiSpammer
-Kicks player when they spam.
+###### Kicks player when they spam.
