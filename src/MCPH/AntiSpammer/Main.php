@@ -30,13 +30,13 @@ use pocketmine\utils\Config;
 		  $message = $cfg->get("kick-message")	
 		  $player = $event->getPlayer();
 		  $playerId = $player->getId(); // an identifier just for that player
-		  if(isset($this->last[$playerId]) and microtime(true) - $this->last[$playerId] < 0.5){ // if this is not the first message the player chatted, and the last message was sent less than 0.5 second ago
-		    $event->setCancelled();
-		    $player->kick($message, false);
-        return;
-      }
-      $this->last[$playerId] = microtime(true); // save the current time as the time the player last chatted
-    }
-  }
+		   if(isset($this->last[$playerId]) and microtime(true) - $this->last[$playerId] < 0.5){ // if this is not the first message the player chatted, and the last message was sent less than 0.5 second ago
+		     $event->setCancelled();
+		     $player->kick($message, false);
+                     return;
+                   }
+                  $this->last[$playerId] = microtime(true); // save the current time as the time the player last chatted
+                }
+         }
 
 ?>  
