@@ -1,6 +1,5 @@
 ---
 # AntiSpammer by MinecrafterPH
-# You can add color using & then the color code. (eg. &3)
 
 kick-message: "You were kicked for spamming."
 ...
