@@ -33,7 +33,7 @@ use pocketmine\utils\TextFormat;
 		  $playerId = $player->getId(); // an identifier just for that player
 		   if(isset($this->last[$playerId]) and microtime(true) - $this->last[$playerId] < 0.5){ // if this is not the first message the player chatted, and the last message was sent less than 0.5 second ago
 		     $event->setCancelled();
-		     $player->kick($message, false);
+		     $player->close("", $message);
                      return;
                    }
                   $this->last[$playerId] = microtime(true); // save the current time as the time the player last chatted
