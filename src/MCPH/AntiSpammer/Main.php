@@ -1,6 +1,6 @@
 <?php
 
-namespace MCPH\AntiSpammer
+namespace MCPH\AntiSpammer;
 
 use pocketmine\Player;
 use pocketmine\Server;
