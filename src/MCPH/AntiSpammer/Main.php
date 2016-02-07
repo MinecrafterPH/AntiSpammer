@@ -18,7 +18,7 @@ use pocketmine\utils\TextFormat;
 		{
 			$this->getServer()->getPluginManager()->registerEvents($this,$this);
 			$this->getLogger()->info("AntiSpammer has been enabled.");
-			$cfg = $this->getConfig();
+			$this->cfg = $this->getConfig();
 		}
 
 		public function onDisable()
@@ -28,7 +28,7 @@ use pocketmine\utils\TextFormat;
 		
 		public function onChat(PlayerChatEvent $event)
 		{
-		  $message = $cfg->get("kick-message");	
+                  $message = $this->cfg->get("kick-message");
 		  $player = $event->getPlayer();
 		  $playerId = $player->getId(); // an identifier just for that player
 		   if(isset($this->last[$playerId]) and microtime(true) - $this->last[$playerId] < 0.5){ // if this is not the first message the player chatted, and the last message was sent less than 0.5 second ago
