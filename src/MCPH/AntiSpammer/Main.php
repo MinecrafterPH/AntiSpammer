@@ -1,6 +1,6 @@
 <?php
 
-namespace MCPH\AntiSpammer
+namespace MCPH\AntiSpammer;
 
 use pocketmine\Player;
 use pocketmine\Server;
@@ -12,7 +12,7 @@ use pocketmine\utils\TextFormat;
 
 	class Main extends PluginBase implements Listener{
 
-	  private $last=[];
+	  private $last = [];
                 
 		public function onEnable()
 		{
